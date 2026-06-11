@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Office temp/lock files
+~$*
+
+# Editor / OS cruft
+*.swp
+Thumbs.db

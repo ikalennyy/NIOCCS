@@ -1,0 +1,50 @@
+/* ============================================================
+   THEME V3 — "Open"  (Asana/Notion-flavored)
+   Display: Sora · Body: Figtree · Mono: JetBrains
+   Emerald accent. Airier spacing, rounded elevated cards,
+   the largest type scale. Friendly, modern, roomy.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body.theme-v3 {
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-sans:    'Figtree', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-stat:    'Sora', system-ui, sans-serif;
+  --font-num:     'JetBrains Mono', ui-monospace, monospace;
+
+  --bg:            #fbfbf9;
+  --surface:       #ffffff;
+  --surface-2:     #f9f9f6;
+  --surface-sunk:  #eff0ec;
+  --border:        #ebebe5;
+  --border-strong: #dbdbd3;
+  --text:          #1b1d18;
+  --text-muted:    #6a6d62;
+  --text-faint:    #9a9d90;
+
+  --accent:        #0f9d76;
+  --accent-hover:  #0c8a67;
+  --accent-on:     #ffffff;
+  --accent-weak:   #e7f6f0;
+  --alert:         #e0533a;
+  --alert-weak:    #fdf0ec;
+  --alert-border:  #f6d1c5;
+
+  --radius:    14px;
+  --radius-lg: 18px;
+  --af-radius: 22px;
+  --gap:       18px;
+  --row-h:     62px;
+  --pad-panel: 34px;
+  --shadow-card: 0 1px 2px rgba(27,29,24,.04), 0 2px 8px -2px rgba(27,29,24,.06);
+  --af-shadow:   0 6px 16px -6px rgba(27,29,24,.10), 0 28px 56px -28px rgba(27,29,24,.30);
+}
+
+body.theme-v3 .brand-mark { background: var(--accent); border-radius: 9px; }
+body.theme-v3 .kpi { border-radius: 16px; }
+
+/* table header — dark & prominent (V2's white header is the exception) */
+body.theme-v3 .data thead th { background: var(--text); color: rgba(255,255,255,.74);
+  border-bottom-color: var(--text); }
+body.theme-v3 .data thead .carets svg { fill: rgba(255,255,255,.5); }

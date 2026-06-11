@@ -1,0 +1,85 @@
+/* ============================================================
+   THEME V2 — "Precise"  (Linear/Vercel-flavored)
+   Display: Archivo · Body: Schibsted Grotesk · Numerals: JetBrains Mono
+   Indigo accent. Flat hairline surfaces. DARK active-file hero +
+   big mono numerals = data-instrument. The boldest of the three.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+body.theme-v2 {
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-sans:    'Schibsted Grotesk', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-stat:    'JetBrains Mono', ui-monospace, monospace;   /* big MONO numbers */
+  --font-num:     'JetBrains Mono', ui-monospace, monospace;
+
+  --bg:            #fafafb;
+  --surface:       #ffffff;
+  --surface-2:     #fafafb;
+  --surface-sunk:  #f0f0f3;
+  --border:        #ececef;
+  --border-strong: #dedee2;
+  --text:          #15151a;
+  --text-muted:    #67676f;
+  --text-faint:    #9a9aa4;
+
+  --accent:        #5b5bd6;
+  --accent-hover:  #4d4dc8;
+  --accent-on:     #ffffff;
+  --accent-weak:   #eeeefb;
+  --alert:         #e5484d;
+  --alert-weak:    #fdedee;
+  --alert-border:  #f6cdcf;
+
+  --radius:    9px;
+  --radius-lg: 12px;
+  --shadow-card: none;
+
+  /* two-tone hero — very dark status bar, lighter charcoal body */
+  --af-bg:         #3b3b42;
+  --af-bar-bg:     #1a1a1e;
+  --af-border:     #2d2d34;
+  --af-text:       #f6f6f8;
+  --af-muted:      rgba(246,246,248,.66);
+  --af-faint:      rgba(246,246,248,.5);
+  --af-line:       rgba(255,255,255,.14);
+  --af-track:      rgba(255,255,255,.18);
+  --af-track-fill: var(--accent);
+  --af-dot:        var(--accent);
+  --af-radius:     14px;
+  --af-shadow:     0 22px 56px -24px rgba(20,20,30,.5);
+}
+
+/* flat surfaces */
+body.theme-v2 .table-wrap { box-shadow: none; }
+body.theme-v2 .data thead th { background: var(--surface); }
+body.theme-v2 .brand-name,
+body.theme-v2 .page-title { letter-spacing: -.025em; }
+
+/* selected filter card — indigo, so it never blends into the dark hero */
+body.theme-v2 .kpi.is-selected {
+  background: var(--accent); border-color: var(--accent);
+  box-shadow: 0 10px 26px -10px rgba(91,91,214,.55);
+}
+
+/* View All / Open CAS — white borders so they hold their edge on charcoal */
+body.theme-v2 .af-actions .btn:not(.btn-primary) {
+  background: transparent; color: #fff; border-color: rgba(255,255,255,.55);
+}
+body.theme-v2 .af-actions .btn:not(.btn-primary):hover {
+  background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.78);
+}
+/* Close File — clearly its own button on the dark status bar */
+body.theme-v2 .af-bar .btn {
+  background: rgba(255,255,255,.10); color: #fff;
+  border-color: rgba(255,255,255,.34); font-weight: 600;
+}
+body.theme-v2 .af-bar .btn:hover {
+  background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.5);
+}
+
+/* amber low-confidence badge re-tuned for the charcoal hero */
+body.theme-v2 .metric-low .metric-label { color: #f8cd6a; opacity: .9; }
+body.theme-v2 .metric-low .badge-count {
+  color: #f8cd6a; border-color: rgba(248,205,106,.5); background: rgba(248,205,106,.16);
+}

@@ -1,0 +1,44 @@
+/* ============================================================
+   THEME V1 — "Soft"  (Airtable-flavored, warmed up)
+   Display: Bricolage Grotesque · Body: Hanken Grotesk · Mono: JetBrains
+   Calm blue accent. Light, friendly, big rounded type.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body.theme-v1 {
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-sans:    'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-stat:    'Bricolage Grotesque', system-ui, sans-serif;
+  --font-num:     'JetBrains Mono', ui-monospace, monospace;
+
+  --bg:            #f7f7f4;
+  --surface:       #ffffff;
+  --surface-2:     #faf9f6;
+  --surface-sunk:  #f0efea;
+  --border:        #e9e7e1;
+  --border-strong: #dad7cf;
+  --text:          #1d1c17;
+  --text-muted:    #6e6c62;
+  --text-faint:    #9c998e;
+
+  --accent:        #2f74f0;
+  --accent-hover:  #2164e0;
+  --accent-on:     #ffffff;
+  --accent-weak:   #eaf1fe;
+  --alert:         #d4502b;
+  --alert-weak:    #fdefe8;
+  --alert-border:  #f4cdba;
+
+  --radius:    12px;
+  --radius-lg: 16px;
+  --af-radius: 20px;
+  --shadow-card: 0 1px 2px rgba(29,28,23,.05), 0 1px 3px rgba(29,28,23,.05);
+}
+
+body.theme-v1 .brand-mark { background: var(--accent); }
+
+/* table header — dark & prominent (V2's white header is the exception) */
+body.theme-v1 .data thead th { background: var(--text); color: rgba(255,255,255,.74);
+  border-bottom-color: var(--text); }
+body.theme-v1 .data thead .carets svg { fill: rgba(255,255,255,.5); }

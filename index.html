@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIOCCS — Hi-Fi Dashboard · Variations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Hanken Grotesk', system-ui, sans-serif; color: #1d1c17;
+           background-color: #f5f5f3;
+           background-image: radial-gradient(circle at 1px 1px, rgba(20,20,15,.045) 1px, transparent 0);
+           background-size: 26px 26px; min-height: 100vh; padding: 72px 28px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+               color: #9c998e; margin-bottom: 16px; }
+    h1 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 44px; font-weight: 800;
+         letter-spacing: -.03em; line-height: 1; margin-bottom: 14px; }
+    .lede { color: #6e6c62; font-size: 16px; max-width: 640px; line-height: 1.6; margin-bottom: 44px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { display: flex; flex-direction: column; background: #fff; border: 1px solid #e9e7e1;
+            border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit;
+            box-shadow: 0 1px 2px rgba(29,28,23,.05);
+            transition: transform .15s, box-shadow .15s, border-color .15s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px -18px rgba(29,28,23,.28); border-color: #dad7cf; }
+    .swatch { height: 104px; display: flex; align-items: flex-end; gap: 7px; padding: 18px; }
+    .s1 { background: linear-gradient(135deg,#f7f7f4,#eaf1fe); }
+    .s2 { background: linear-gradient(135deg,#16161a,#26263a); }
+    .s3 { background: linear-gradient(135deg,#fbfbf9,#e7f6f0); }
+    .dot { width: 24px; height: 24px; border-radius: 7px; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+    .d-a1 { background: #2f74f0; } .d-a2 { background: #5b5bd6; } .d-a3 { background: #0f9d76; }
+    .d-alert { background: #d4502b; }
+    .d-dark { background: #16161a; } .d-light { background: #fff; }
+    .body { padding: 20px 22px 24px; }
+    .name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 19px; font-weight: 800; margin-bottom: 5px; }
+    .tag { font-size: 12px; color: #9c998e; font-weight: 600; margin-bottom: 12px;
+           text-transform: uppercase; letter-spacing: .06em; }
+    .desc { font-size: 13.5px; color: #6e6c62; line-height: 1.55; }
+    .fonts { font-size: 12px; color: #9c998e; margin-top: 12px; }
+    .fonts b { color: #1d1c17; font-weight: 600; }
+    .open { margin-top: 16px; font-size: 13.5px; font-weight: 700; display: inline-flex; gap: 6px; }
+    .o1 { color: #2f74f0; } .o2 { color: #5b5bd6; } .o3 { color: #0f9d76; }
+    .note { margin-top: 40px; font-size: 13.5px; color: #9c998e; line-height: 1.6; }
+    .note b { color: #1d1c17; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">NIOCCS · Phase 1 · Dashboard / Resume Workflow</p>
+    <h1>High-Fidelity Variations</h1>
+    <p class="lede">Three directions for the file-status &amp; resume dashboard. Same layout and data — different typographic personality. The pop comes from <b>type, scale, and contrast</b>; color stays reserved for what needs attention and the primary action.</p>
+
+    <div class="grid">
+      <a class="card" href="dashboard-v1.html">
+        <div class="swatch s1"><span class="dot d-light" style="border:1px solid #dad7cf"></span><span class="dot d-a1"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V1 — Soft</div>
+          <div class="tag">Airtable-flavored</div>
+          <div class="desc">Warm neutrals, rounded cards, light hero. Friendly and approachable, with big rounded numerals.</div>
+          <div class="fonts"><b>Bricolage Grotesque</b> + Hanken Grotesk · blue</div>
+          <span class="open o1">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v2.html">
+        <div class="swatch s2"><span class="dot d-dark" style="border:1px solid #33333a"></span><span class="dot d-a2"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V2 — Precise</div>
+          <div class="tag">Linear / Vercel-flavored</div>
+          <div class="desc">Flat hairline surfaces and a <b>near-black active-file hero</b> with big mono numerals. The boldest, most data-instrument feel.</div>
+          <div class="fonts"><b>Archivo</b> + Schibsted Grotesk + mono · indigo</div>
+          <span class="open o2">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v3.html">
+        <div class="swatch s3"><span class="dot d-light" style="border:1px solid #dbdbd3"></span><span class="dot d-a3"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V3 — Open</div>
+          <div class="tag">Asana / Notion-flavored</div>
+          <div class="desc">Airier spacing, rounded elevated cards, the largest type scale. Roomy, modern, and geometric.</div>
+          <div class="fonts"><b>Sora</b> + Figtree · emerald</div>
+          <span class="open o3">Open variation →</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="note"><b>Next:</b> pick a direction (or mix — e.g. V2's mono numerals with V3's spacing). I'll refine the winner, add interaction states, and reuse its system for the remaining screens.</p>
+  </div>
+</body>
+</html>
