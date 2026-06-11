@@ -1,0 +1,118 @@
+/* ============================================================
+   THEME V6 — "Console"  (the wildcard: sidebar app-shell)
+   Display: Manrope · Body: Onest · Mono: JetBrains Mono
+   Dark slate SIDEBAR as chrome, light working canvas.
+   Accent: fuchsia. Layout: .shell = sidebar + main.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body.theme-v6 {
+  --font-display: 'Manrope', system-ui, sans-serif;
+  --font-sans:    'Onest', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-stat:    'Manrope', system-ui, sans-serif;
+  --font-num:     'JetBrains Mono', ui-monospace, monospace;
+
+  --bg:            #f5f6f8;
+  --surface:       #ffffff;
+  --surface-2:     #fafafb;
+  --surface-sunk:  #eceef2;
+  --border:        #e6e8ec;
+  --border-strong: #d5d8df;
+  --text:          #17181d;
+  --text-muted:    #62646e;
+  --text-faint:    #989aa6;
+
+  --accent:        #c026d3;
+  --accent-hover:  #a821b9;
+  --accent-on:     #ffffff;
+  --accent-weak:   #fbeafe;
+  --alert:         #e0432f;
+  --alert-weak:    #fdefec;
+  --alert-border:  #f5cdc2;
+
+  --radius-sm: 8px;
+  --radius:    12px;
+  --radius-lg: 14px;
+  --af-radius: 16px;
+  --shadow-card: 0 1px 2px rgba(23,24,29,.05);
+  --shadow-pop:  0 14px 36px -12px rgba(23,24,29,.22);
+
+  /* sidebar chrome */
+  --side-bg:    #17181d;
+  --side-text:  rgba(255,255,255,.92);
+  --side-muted: rgba(255,255,255,.52);
+  --side-line:  rgba(255,255,255,.09);
+  --side-w:     236px;
+}
+
+/* ── shell layout ─────────────────────────────────────────── */
+body.theme-v6 { display: flex; min-height: 100vh; }
+.sidebar {
+  width: var(--side-w); flex-shrink: 0;
+  position: sticky; top: 0; height: 100vh;
+  background: var(--side-bg); color: var(--side-text);
+  display: flex; flex-direction: column;
+  padding: 22px 16px;
+}
+.side-brand { display: flex; align-items: center; gap: 11px; padding: 4px 10px 22px;
+  border-bottom: 1px solid var(--side-line); margin-bottom: 18px; }
+.side-brand .brand-mark { background: var(--accent); color: #fff; }
+.side-brand .brand-name { color: var(--side-text); }
+.side-nav { display: flex; flex-direction: column; gap: 3px; }
+.side-link { display: flex; align-items: center; gap: 11px;
+  padding: 10px 12px; border-radius: 9px;
+  font-size: 14px; font-weight: 500; color: var(--side-muted);
+  transition: background .15s var(--ease), color .15s var(--ease); }
+.side-link .icon { width: 17px; height: 17px; }
+.side-link:hover { color: var(--side-text); background: rgba(255,255,255,.06); }
+.side-link.is-active { color: #fff; background: rgba(255,255,255,.10);
+  font-weight: 700; box-shadow: inset 3px 0 0 var(--accent); }
+.side-spacer { flex: 1; }
+.side-upload { margin-bottom: 14px; }
+.side-upload .btn { width: 100%; justify-content: center; }
+.side-user { display: flex; align-items: center; gap: 10px;
+  padding: 12px 10px 2px; border-top: 1px solid var(--side-line); }
+.side-user .avatar { background: rgba(255,255,255,.14); color: #fff;
+  border: none; }
+.side-user-meta { display: flex; flex-direction: column; line-height: 1.25; }
+.side-user-name { font-size: 13px; font-weight: 600; color: var(--side-text); }
+.side-user-role { font-size: 11px; color: var(--side-muted); }
+
+.main { flex: 1; min-width: 0; }
+body.theme-v6 .page { max-width: 1240px; padding: 36px 36px 72px; }
+
+/* narrower content column — hero stacks: info → metrics → progress → actions */
+body.theme-v6 .af-body { flex-direction: column; align-items: stretch; gap: 0; }
+body.theme-v6 .af-main { min-width: 0; }
+body.theme-v6 .af-actions { margin-top: 26px; padding-top: 22px;
+  border-top: 1px solid var(--border); }
+
+/* KPI labels: keep to one line in the tighter 5-up grid */
+body.theme-v6 .kpi { padding: 18px 16px; }
+body.theme-v6 .kpi-label { font-size: 10px; letter-spacing: .07em;
+  white-space: nowrap; padding-right: 14px; }
+body.theme-v6 .kpi-pick { top: 14px; right: 12px; }
+body.theme-v6 .kpi-flag { top: 15px; right: 14px; }
+body.theme-v6 .kpi--alert .kpi-label { padding-right: 18px; }
+
+/* dark prominent table header */
+body.theme-v6 .data thead th { background: var(--text); color: rgba(255,255,255,.74);
+  border-bottom-color: var(--text); }
+body.theme-v6 .data thead .carets svg { fill: rgba(255,255,255,.5); }
+
+/* selected KPI matches sidebar chrome (near-black w/ accent rail) */
+body.theme-v6 .kpi.is-selected { background: var(--side-bg); border-color: var(--side-bg);
+  box-shadow: inset 0 3px 0 var(--accent), var(--shadow-pop); }
+
+body.theme-v6 .btn-primary { box-shadow: 0 4px 14px -4px rgba(192,38,211,.4); }
+body.theme-v6 .progress-fill { background: var(--accent); }
+
+@media (max-width: 900px) {
+  body.theme-v6 { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: static; flex-direction: row;
+    align-items: center; padding: 12px 16px; }
+  .side-brand { border: none; padding: 0; margin: 0 16px 0 0; }
+  .side-nav { flex-direction: row; }
+  .side-upload, .side-user { display: none; }
+}

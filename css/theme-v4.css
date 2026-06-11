@@ -1,0 +1,77 @@
+/* ============================================================
+   THEME V4 — "Ink"  (editorial / brutalist-lite)
+   Display: Syne · Body: IBM Plex Sans · Mono: IBM Plex Mono
+   Warm paper canvas, sharp corners, 2px ink borders, HARD offset
+   shadows instead of blur. Pop = structure, not decoration.
+   Accent: deep cyan.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap');
+
+body.theme-v4 {
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-sans:    'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+  --font-stat:    'Syne', system-ui, sans-serif;
+  --font-num:     'IBM Plex Mono', ui-monospace, monospace;
+
+  --bg:            #faf8f3;
+  --surface:       #ffffff;
+  --surface-2:     #f6f4ee;
+  --surface-sunk:  #efece4;
+  --border:        #e3dfd5;
+  --border-strong: #14130f;        /* structural borders are INK */
+  --text:          #14130f;
+  --text-muted:    #5f5c52;
+  --text-faint:    #94907f;
+
+  --accent:        #0e7490;
+  --accent-hover:  #0b5e75;
+  --accent-on:     #ffffff;
+  --accent-weak:   #e3f3f8;
+  --alert:         #d8472b;
+  --alert-weak:    #fcefe9;
+  --alert-border:  #d8472b;
+
+  /* sharp + flat */
+  --radius-sm: 3px;
+  --radius:    4px;
+  --radius-lg: 5px;
+  --af-radius: 5px;
+  --shadow-card: none;
+  --shadow-pop:  6px 6px 0 #14130f;          /* the signature */
+  --af-shadow:   10px 10px 0 #14130f;
+  --ring: 0 0 0 3px var(--accent-weak);
+
+  --af-border: #14130f;
+}
+
+/* ink structure — 2px borders on interactive/structural pieces */
+body.theme-v4 .kpi,
+body.theme-v4 .active-file,
+body.theme-v4 .btn,
+body.theme-v4 .search-input,
+body.theme-v4 .notice,
+body.theme-v4 .table-wrap { border-width: 2px; }
+body.theme-v4 .kpi { border-color: #14130f; }
+body.theme-v4 .kpi:hover { transform: translate(-2px,-2px); box-shadow: 4px 4px 0 #14130f; }
+body.theme-v4 .kpi--alert { border-color: var(--alert); }
+body.theme-v4 .kpi--alert.is-selected { box-shadow: 4px 4px 0 rgba(216,71,43,.35); }
+body.theme-v4 .brand-mark { border-radius: 4px; }
+body.theme-v4 .page-title { letter-spacing: -.01em; }
+
+/* hero: white, ink-framed, hard offset shadow */
+body.theme-v4 .af-bar { background: #14130f; border-bottom: none; }
+body.theme-v4 .af-badge { color: rgba(255,255,255,.75); }
+body.theme-v4 .af-bar .btn { background: transparent; color: #fff;
+  border-color: rgba(255,255,255,.55); }
+body.theme-v4 .af-bar .btn:hover { background: rgba(255,255,255,.14);
+  border-color: #fff; }
+
+/* dark prominent table header */
+body.theme-v4 .data thead th { background: #14130f; color: rgba(255,255,255,.78);
+  border-bottom-color: #14130f; }
+body.theme-v4 .data thead .carets svg { fill: rgba(255,255,255,.5); }
+
+/* buttons: square, decisive */
+body.theme-v4 .btn:hover { box-shadow: 3px 3px 0 rgba(20,19,15,.25); }
+body.theme-v4 .btn-primary:hover { box-shadow: 3px 3px 0 rgba(14,116,144,.3); }

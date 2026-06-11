@@ -56,7 +56,7 @@
   let term = '';
 
   const els = {
-    cards:    Array.from(document.querySelectorAll('.kpi[data-bucket]')),
+    cards:    Array.from(document.querySelectorAll('[data-bucket]')),
     rows:     document.getElementById('file-rows'),
     regLabel: document.getElementById('reg-label'),
     regCount: document.getElementById('reg-count'),

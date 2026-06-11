@@ -29,8 +29,20 @@
     .s1 { background: linear-gradient(135deg,#f7f7f4,#eaf1fe); }
     .s2 { background: linear-gradient(135deg,#16161a,#26263a); }
     .s3 { background: linear-gradient(135deg,#fbfbf9,#e7f6f0); }
+    .s4 { background: linear-gradient(135deg,#faf8f3,#e3f3f8); }
+    .s5 { background: linear-gradient(135deg,#f7f8fa,#f3e9fb); }
+    .s6 { background: linear-gradient(135deg,#17181d,#3a2040); }
+    .s7 { background: radial-gradient(120px 80px at 25% 0%, rgba(64,93,230,.18), transparent 70%),
+          radial-gradient(120px 80px at 75% 10%, rgba(118,78,233,.14), transparent 70%), #f7f7f9; }
+    .s8 { background: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px), #14160f;
+          background-size: 20px 20px, 20px 20px, 100% 100%; border-bottom: 3px solid #b8e92e; }
     .dot { width: 24px; height: 24px; border-radius: 7px; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
     .d-a1 { background: #2f74f0; } .d-a2 { background: #5b5bd6; } .d-a3 { background: #0f9d76; }
+    .d-a4 { background: #0e7490; } .d-a5 { background: #7e22ce; } .d-a6 { background: #c026d3; }
+    .d-a7 { background: linear-gradient(116deg,#2447d6,#7048e8); }
+    .o4 { color: #0e7490; } .o5 { color: #7e22ce; } .o6 { color: #c026d3; }
+    .o7 { color: #4338ca; } .d-a8 { background: #b8e92e; } .o8 { color: #7fa31a; }
     .d-alert { background: #d4502b; }
     .d-dark { background: #16161a; } .d-light { background: #fff; }
     .body { padding: 20px 22px 24px; }
@@ -50,7 +62,7 @@
   <div class="wrap">
     <p class="eyebrow">NIOCCS · Phase 1 · Dashboard / Resume Workflow</p>
     <h1>High-Fidelity Variations</h1>
-    <p class="lede">Three directions for the file-status &amp; resume dashboard. Same layout and data — different typographic personality. The pop comes from <b>type, scale, and contrast</b>; color stays reserved for what needs attention and the primary action.</p>
+    <p class="lede">Eight directions for the file-status &amp; resume dashboard — same data and behavior, different visual language. The pop comes from <b>type, scale, and contrast</b>; color stays reserved for what needs attention and the primary action. V6 is the layout wildcard (sidebar app-shell).</p>
 
     <div class="grid">
       <a class="card" href="dashboard-v1.html">
@@ -81,6 +93,56 @@
           <div class="desc">Airier spacing, rounded elevated cards, the largest type scale. Roomy, modern, and geometric.</div>
           <div class="fonts"><b>Sora</b> + Figtree · emerald</div>
           <span class="open o3">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v4.html">
+        <div class="swatch s4"><span class="dot d-light" style="border:2px solid #14130f"></span><span class="dot d-a4"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V4 — Ink</div>
+          <div class="tag">Editorial / brutalist-lite</div>
+          <div class="desc">Warm paper, sharp corners, 2px ink frames, <b>hard offset shadows</b>. Structure does the popping.</div>
+          <div class="fonts"><b>Syne</b> + IBM Plex Sans &amp; Mono · deep cyan</div>
+          <span class="open o4">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v5.html">
+        <div class="swatch s5"><span class="dot d-light" style="border:1px solid #d4d7e0"></span><span class="dot d-a5"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V5 — Bold</div>
+          <div class="tag">Confident geometric</div>
+          <div class="desc">Wide techno numerals, pill controls, soft tinted depth. The numbers <b>are</b> the brand.</div>
+          <div class="fonts"><b>Unbounded</b> + Plus Jakarta Sans · grape</div>
+          <span class="open o5">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v6.html">
+        <div class="swatch s6"><span class="dot d-dark" style="border:1px solid #33333a"></span><span class="dot d-a6"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V6 — Console</div>
+          <div class="tag">Wildcard · sidebar app-shell</div>
+          <div class="desc">Dark slate <b>sidebar navigation</b>, light working canvas, stacked hero. The structural experiment.</div>
+          <div class="fonts"><b>Manrope</b> + Onest · fuchsia</div>
+          <span class="open o6">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v7.html">
+        <div class="swatch s7"><span class="dot d-light" style="border:1px solid #d9d9e0"></span><span class="dot d-a7"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V7 — Atmosphere</div>
+          <div class="tag">The most-modern one</div>
+          <div class="desc">Near-mono glass UI over a <b>subtle fog of light</b>; one cobalt→violet <b>gradient thread</b> through CTA, selected card, and progress.</div>
+          <div class="fonts"><b>Funnel Display</b> + Geist &amp; Geist Mono · gradient</div>
+          <span class="open o7">Open variation →</span>
+        </div>
+      </a>
+      <a class="card" href="dashboard-v8.html">
+        <div class="swatch s8"><span class="dot d-dark" style="border:1px solid #2c2f22"></span><span class="dot d-a8"></span><span class="dot d-alert"></span></div>
+        <div class="body">
+          <div class="name">V8 — Instrument</div>
+          <div class="tag">Command deck / split canvas</div>
+          <div class="desc">Ink <b>instrument panel</b> (stat segments, radial gauge, condensed numerals) over a light paper work queue. No cards anywhere.</div>
+          <div class="fonts"><b>Saira Condensed</b> + Chivo + Martian Mono · acid lime</div>
+          <span class="open o8">Open variation →</span>
         </div>
       </a>
     </div>

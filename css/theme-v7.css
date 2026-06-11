@@ -1,0 +1,124 @@
+/* ============================================================
+   THEME V7 — "Atmosphere"  (the most-modern one)
+   Display: Funnel Display · UI: Geist · Data: Geist Mono
+   Near-monochrome UI over a subtle fog of light. Depth from
+   glass + layered hairlines, not shadows. ONE gradient thread
+   (cobalt→violet) carries the CTA, the selected card, and the
+   progress fill. Red/amber signals stay flat — signals never
+   shimmer. Fully static: the composition does the work.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap');
+
+body.theme-v7 {
+  --font-display: 'Funnel Display', system-ui, sans-serif;
+  --font-sans:    'Geist', system-ui, sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, monospace;
+  --font-stat:    'Funnel Display', system-ui, sans-serif;
+  --font-num:     'Geist Mono', ui-monospace, monospace;
+
+  --bg:            #f7f7f9;
+  --surface:       #ffffff;
+  --surface-2:     #fafafc;
+  --surface-sunk:  #eff0f4;
+  --border:        #e9e9ee;
+  --border-strong: #d9d9e0;
+  --text:          #131318;
+  --text-muted:    #63636e;
+  --text-faint:    #9697a3;
+
+  /* the gradient thread (cobalt → violet); --accent = its midpoint
+     for places that need a solid (focus rings, dots, links) */
+  --grad: linear-gradient(116deg, #2447d6 0%, #4f46e5 52%, #7048e8 100%);
+  --accent:        #4338ca;
+  --accent-hover:  #3730b3;
+  --accent-on:     #ffffff;
+  --accent-weak:   #eceefc;
+  --alert:         #d8472b;
+  --alert-weak:    #fcefec;
+  --alert-border:  #f3cabf;
+
+  --radius-sm: 10px;
+  --radius:    14px;
+  --radius-lg: 18px;
+  --af-radius: 20px;
+  --shadow-card: 0 1px 2px rgba(19,19,24,.04);
+  --shadow-pop:  0 16px 44px -16px rgba(36,52,120,.22);
+  --af-shadow:   0 2px 6px -2px rgba(19,19,24,.05), 0 28px 64px -36px rgba(36,52,120,.32);
+  --ring: 0 0 0 3px var(--accent-weak);
+}
+
+/* ── subtle fog: desaturated light pooling at the top, then calm ── */
+body.theme-v7 {
+  background:
+    radial-gradient(1000px 520px at 16% -12%, rgba(64, 93, 230, .085), transparent 62%),
+    radial-gradient(900px 460px at 82% -14%, rgba(118, 78, 233, .07), transparent 60%),
+    radial-gradient(760px 520px at 52% 4%,  rgba(56, 152, 255, .05), transparent 65%),
+    var(--bg);
+}
+
+/* glass app bar — frosted, saturated, floating hairline */
+body.theme-v7 .appbar {
+  background: rgba(255,255,255,.66);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border-bottom-color: rgba(19,19,24,.07);
+}
+body.theme-v7 .brand-mark { background: var(--grad); border-radius: 9px; }
+body.theme-v7 .avatar { background: var(--text); color: #fff; border: none; }
+
+/* hero — white glass framed by a gradient hairline */
+body.theme-v7 .active-file {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(135deg, rgba(36,71,214,.45), rgba(112,72,232,.28) 45%, rgba(56,152,255,.35)) border-box;
+}
+body.theme-v7 .af-bar { background: rgba(247,247,250,.7);
+  border-bottom-color: rgba(19,19,24,.06); }
+body.theme-v7 .af-dot { background: var(--accent); }
+/* faint top-light inside the hero body — glass catching the fog */
+body.theme-v7 .af-body { background:
+  radial-gradient(640px 200px at 28% 0%, rgba(79,70,229,.045), transparent 70%); }
+
+/* the gradient thread */
+body.theme-v7 .btn-primary {
+  background: var(--grad); border: none;
+  box-shadow: 0 6px 18px -6px rgba(67,56,202,.45);
+}
+body.theme-v7 .btn-primary:hover { filter: brightness(1.08); background: var(--grad); }
+body.theme-v7 .kpi.is-selected { background: var(--grad); border-color: transparent;
+  box-shadow: 0 14px 36px -14px rgba(67,56,202,.5); }
+/* signals never shimmer — selected alert card stays flat red */
+body.theme-v7 .kpi--alert.is-selected { background: var(--alert); border-color: var(--alert);
+  box-shadow: 0 14px 36px -14px rgba(216,71,43,.45); }
+body.theme-v7 .progress-fill { background: var(--grad); }
+body.theme-v7 .progress-track { background: var(--surface-sunk); }
+
+/* KPI cards — flat hairline glass; hover lifts the light, not the box */
+body.theme-v7 .kpi { background: rgba(255,255,255,.78);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+body.theme-v7 .kpi:hover { transform: none; border-color: rgba(67,56,202,.35);
+  box-shadow: 0 10px 30px -14px rgba(36,52,120,.25); }
+body.theme-v7 .kpi--alert { background: var(--alert-weak); }
+
+/* dark prominent table header (house rule; V2 keeps the exception) */
+body.theme-v7 .data thead th { background: var(--text); color: rgba(255,255,255,.72);
+  border-bottom-color: var(--text); }
+body.theme-v7 .data thead .carets svg { fill: rgba(255,255,255,.5); }
+body.theme-v7 .table-wrap { box-shadow: var(--shadow-card); }
+
+/* type tuning — Funnel Display is compact; let it breathe */
+body.theme-v7 .page-title { font-weight: 700; letter-spacing: -.015em; }
+body.theme-v7 .kpi-value { font-weight: 600; }
+body.theme-v7 .metric-value { font-weight: 600; }
+body.theme-v7 .af-name { font-weight: 600; }
+body.theme-v7 .table-title { font-weight: 600; }
+
+/* quiet pieces stay quiet */
+body.theme-v7 .notice { background: rgba(255,255,255,.8);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+body.theme-v7 .seg button.is-active { background: var(--text); }
+
+/* static by design — disable the base pulse animations */
+body.theme-v7 .kpi-flag,
+body.theme-v7 .af-dot { animation: none; }

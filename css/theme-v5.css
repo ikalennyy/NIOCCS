@@ -1,0 +1,75 @@
+/* ============================================================
+   THEME V5 — "Bold"  (confident geometric)
+   Display: Unbounded (wide, techy — the numerals ARE the brand)
+   Body: Plus Jakarta Sans · Mono: JetBrains Mono
+   Cool porcelain canvas, pill buttons, soft tinted depth.
+   Accent: grape.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body.theme-v5 {
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-sans:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-stat:    'Unbounded', system-ui, sans-serif;
+  --font-num:     'JetBrains Mono', ui-monospace, monospace;
+
+  --bg:            #f7f8fa;
+  --surface:       #ffffff;
+  --surface-2:     #fafbfc;
+  --surface-sunk:  #eef0f4;
+  --border:        #e6e8ee;
+  --border-strong: #d4d7e0;
+  --text:          #16151d;
+  --text-muted:    #646271;
+  --text-faint:    #9a98a8;
+
+  --accent:        #7e22ce;
+  --accent-hover:  #6b1cb0;
+  --accent-on:     #ffffff;
+  --accent-weak:   #f3e9fb;
+  --alert:         #d8472b;
+  --alert-weak:    #fcefec;
+  --alert-border:  #f3cabf;
+
+  /* Unbounded runs very wide — optically matches 48px Sora at ~40 */
+  --fs-stat:   40px;
+  --fs-title:  34px;
+  --fs-metric: 22px;
+
+  --radius-sm: 10px;
+  --radius:    16px;
+  --radius-lg: 20px;
+  --af-radius: 24px;
+  --shadow-card: 0 1px 2px rgba(22,21,29,.04), 0 4px 14px -4px rgba(22,21,29,.07);
+  --shadow-pop:  0 18px 40px -14px rgba(126,34,206,.25);
+  --af-shadow:   0 6px 18px -8px rgba(22,21,29,.08), 0 30px 60px -30px rgba(22,21,29,.28);
+}
+
+/* pill controls */
+body.theme-v5 .btn,
+body.theme-v5 .search-input,
+body.theme-v5 .pager-btn { border-radius: 999px; }
+body.theme-v5 .btn { padding: 0 21px; }
+body.theme-v5 .btn-sm { padding: 0 16px; }
+body.theme-v5 .seg { border-radius: 999px; }
+body.theme-v5 .brand-mark { background: var(--accent); border-radius: 12px; }
+body.theme-v5 .avatar { background: var(--accent); }
+
+/* display face is loud — calm it slightly where it's structural */
+body.theme-v5 .page-title { font-weight: 700; letter-spacing: -.01em; }
+body.theme-v5 .kpi-value { font-weight: 600; }
+body.theme-v5 .metric-value { font-weight: 600; }
+body.theme-v5 .progress-head .pct { font-weight: 600; font-size: 17px; }
+body.theme-v5 .table-title { font-weight: 600; font-size: 22px; }
+body.theme-v5 .registry-title { font-weight: 600; }
+body.theme-v5 .af-name { font-weight: 700; }
+
+/* dark prominent table header */
+body.theme-v5 .data thead th { background: var(--text); color: rgba(255,255,255,.74);
+  border-bottom-color: var(--text); }
+body.theme-v5 .data thead .carets svg { fill: rgba(255,255,255,.5); }
+
+/* progress picks up the accent — V5's hero is light, the bar can carry it */
+body.theme-v5 .progress-fill { background: var(--accent); }
+body.theme-v5 .btn-primary { box-shadow: 0 4px 14px -4px rgba(126,34,206,.45); }
