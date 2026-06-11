@@ -26,9 +26,12 @@ body.theme-v7 {
   --text-muted:    #63636e;
   --text-faint:    #9697a3;
 
-  /* the gradient thread (cobalt → violet); --accent = its midpoint
-     for places that need a solid (focus rings, dots, links) */
-  --grad: linear-gradient(116deg, #2447d6 0%, #4f46e5 52%, #7048e8 100%);
+  /* the gradient thread; --accent = its midpoint for solids
+     (focus rings, dots, links). --grad keeps the original violet end
+     for the brand mark + hero hairline; --grad-action ends in
+     cornflower blue for the action elements (card, button, progress). */
+  --grad:        linear-gradient(116deg, #2447d6 0%, #4f46e5 52%, #7048e8 100%);
+  --grad-action: linear-gradient(116deg, #2447d6 0%, #4f46e5 52%, #4863e8 100%);
   --accent:        #4338ca;
   --accent-hover:  #3730b3;
   --accent-on:     #ffffff;
@@ -80,18 +83,18 @@ body.theme-v7 .af-dot { background: var(--accent); }
 body.theme-v7 .af-body { background:
   radial-gradient(640px 200px at 28% 0%, rgba(79,70,229,.045), transparent 70%); }
 
-/* the gradient thread */
+/* the gradient thread — action elements use the cornflower-end variant */
 body.theme-v7 .btn-primary {
-  background: var(--grad); border: none;
+  background: var(--grad-action); border: none;
   box-shadow: 0 6px 18px -6px rgba(67,56,202,.45);
 }
-body.theme-v7 .btn-primary:hover { filter: brightness(1.08); background: var(--grad); }
-body.theme-v7 .kpi.is-selected { background: var(--grad); border-color: transparent;
+body.theme-v7 .btn-primary:hover { filter: brightness(1.08); background: var(--grad-action); }
+body.theme-v7 .kpi.is-selected { background: var(--grad-action); border-color: transparent;
   box-shadow: 0 14px 36px -14px rgba(67,56,202,.5); }
 /* signals never shimmer — selected alert card stays flat red */
 body.theme-v7 .kpi--alert.is-selected { background: var(--alert); border-color: var(--alert);
   box-shadow: 0 14px 36px -14px rgba(216,71,43,.45); }
-body.theme-v7 .progress-fill { background: var(--grad); }
+body.theme-v7 .progress-fill { background: var(--grad-action); }
 body.theme-v7 .progress-track { background: var(--surface-sunk); }
 
 /* KPI cards — flat hairline glass; hover lifts the light, not the box */
